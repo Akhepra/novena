@@ -4,11 +4,16 @@
 setlocale(LC_TIME, "es_ES");
 
 
-// TESTING CODE
-//$date = mktime(0, 0, 0, 12, 16, 2017);
 
-// COMMENTED OUT FOR TESTING
 $date = time();
+
+// TESTING CODE
+
+if (isset($_GET['d'])) {
+  $date = mktime(0, 0, 0, 12, $_GET['d'], 2017);
+}
+
+
 
 $day = date('d', $date);
 $month = date('m', $date);
@@ -20,21 +25,23 @@ $daysTo = round(($start - $date) / (60 * 60 * 24));
 // FECHA
 $fecha = "";
 
-$days = ["16"=>"primero",
- "17"=>"segundo",
- "18"=>"tercero",
- "19"=>"cuarto",
- "20"=>"quinto",
- "21"=>"sexto",
- "22"=>"séptimo",
- "23"=>"octavo",
- "24"=>"noveno"];
+$days = [
+ "16"=>["primero", 1],
+ "17"=>["segundo", 2],
+ "18"=>["tercero", 3],
+ "19"=>["cuarto", 4],
+ "20"=>["quinto", 5],
+ "21"=>["sexto", 6],
+ "22"=>["séptimo", 7],
+ "23"=>["octavo", 8],
+ "24"=>["noveno", 9]
+];
 
 if ($month == 12 && $day > 15 && $day < 25) {
-    $fecha = ucwords(strftime('%a, %b %e', $date));
-    $dias = "D&iacute;a " . $days[$day];
+    $fecha = htmlentities(ucwords(strftime('%a, %b %e', $date)));
+    $dias = htmlentities("Día ") . htmlentities($days[$day][0]);
 } elseif ($month == 12 && $day > 24) {
-    $dias = "Acab&ocute; de pasar";
+    $dias = "Acab&oacute; de pasar";
 } else {
     $dias = "Faltan " . $daysTo . " d&iacute;as";
 }

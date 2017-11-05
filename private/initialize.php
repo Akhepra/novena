@@ -17,8 +17,8 @@ define("SHARED_PATH", PRIVATE_PATH . '/shared');
 
 // for the links that require localhost location
 // COMMENT FOR DEPLOY
-$rdp_end = strpos($_SERVER['SCRIPT_NAME'], '/novena') + 7;
-$doc_root = substr($_SERVER['SCRIPT_NAME'], 0, $rdp_end);
+$novena_end = strpos($_SERVER['SCRIPT_NAME'], '/novena') + 7;
+$doc_root = substr($_SERVER['SCRIPT_NAME'], 0, $novena_end);
 define("WWW_ROOT", $doc_root);
 
 // UNCOMMENT FOR DEPLOY

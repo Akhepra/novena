@@ -1,0 +1,247 @@
+/* Import Google fonts */
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Catamaran:100,400,500,700');
+
+/*
+font-family: 'Raleway', sans-serif;
+font-family: 'Lobster', cursive;
+font-family: 'Catamaran', sans-serif;
+*/
+
+/* Coolors Exported Palette - coolors.co/08415c-cc2936-ebbab9-388697-b5ffe1 */
+
+/* 
+HSL 
+$color1: hsla(199%, 84%, 20%, 1);
+$color2: hsla(355%, 67%, 48%, 1);
+$color3: hsla(1%, 56%, 82%, 1);
+$color4: hsla(191%, 46%, 41%, 1);
+$color5: hsla(156%, 100%, 85%, 1);
+
+ RGB 
+$color1: rgba(8, 65, 92, 1);
+$color2: rgba(204, 41, 54, 1);
+$color3: rgba(235, 186, 185, 1);
+$color4: rgba(56, 134, 151, 1);
+$color5: rgba(181, 255, 225, 1);
+*/
+
+/* GENERAL STYLE */
+
+body {
+  color: #555;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.8em;
+/*  text-align: right;*/
+}
+
+#banner {
+  width: 100%;
+  margin: 0 auto;
+  padding: 8px 25px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+  box-sizing: border-box;
+  z-index: 5;
+  font-weight: 500;
+  line-height: 1em;
+}
+
+.date {
+  float: left;
+}
+
+.day {
+  float: right;
+}
+
+.almost {
+  background-color: #08415c;
+  color: #a9ffda;
+}
+
+.novena {
+  background-color: #cc2936;
+  color: #ebbab9;
+}
+
+.hero {
+  
+  height: 400px;
+  background: url(../images/0_Paz.png) top center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  position: relative;
+}
+
+h1 {
+  font-family: 'Lobster', cursive;
+  font-size: 2.2rem;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, .6);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 0;
+}
+
+
+h2 {
+  font-family: 'Lobster', cursive;
+  display: block;
+  margin: 35px auto;
+  font-size: 1.8rem;
+  padding: 130px 25px 10px;
+  font-weight: 300;
+  line-height: 1.03;
+  text-align: center;
+  color: #2d7385;
+
+  background: url(../images/candle.png) top center no-repeat;
+}
+
+article p {
+  margin: 20px 10%;
+}
+
+article p.pray {
+  font-style: italic;
+  font-size: .9em;
+  margin-bottom: 55px;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+article p:last-of-type a {
+  font-weight: 600;
+  color: #ef8610;
+}
+
+.next {
+  background-color: #388697;
+  padding: 0 5% 70px;
+  text-align: right;
+  font-family: 'Lobster', cursive;
+  font-size: 1.3em;
+  line-height: 1em;
+}
+
+.next a.next_lk::after {
+  content: "";
+  display: inline-block;
+  /* By using an em scale, the arrows will size with the font */
+  width: 0.4em;
+  height: 0.4em;
+  border-right: 0.15em solid white;
+  border-top: 0.15em solid white;
+  transform: rotate(45deg);
+  margin-left: 0.2em;
+}
+
+
+/* Villancicos */
+
+#villancicos {
+  display: none;
+  box-sizing: border-box;
+  width: 90%;
+  background-color: #fff;
+  padding: 7px 0;
+  position: fixed;
+  bottom: 0;
+  right: 5%;
+  text-align: right;
+  border-top: solid 1px #08415c;
+}
+
+#villancicos a {
+  font-family: 'Lobster', cursive;
+  font-size: 1.3em;
+  line-height: 1.26;
+  text-align: left;
+  color: #0b314a;
+
+}
+
+#villancicos a::after {
+  content: "";
+  display: inline-block;
+  /* By using an em scale, the arrows will size with the font */
+  width: 0.4em;
+  height: 0.4em;
+  border-right: 0.15em solid #08415c;
+  border-top: 0.15em solid #08415c;
+  transform: rotate(45deg);
+  margin-left: 0.2em;
+}
+
+
+
+.chamfer {
+  float: left;
+  width: 100%;
+  height: 100px;
+  background: url(../images/rectangle.png);
+  -webkit-background-size: 100%;
+}
+
+article:nth-of-type(2) {
+  margin: 20px 10% 80px;
+}
+
+article:nth-of-type(2) ul {
+  padding-left: 0;
+} 
+
+article:nth-of-type(2) li {
+  text-decoration: none;
+  list-style-type: none;
+  font-style: italic;
+}
+article:nth-of-type(2) li a {
+  color: #388697;
+}
+
+article:nth-of-type(2) li a::after {
+  content: "";
+  display: inline-block;
+  /* By using an em scale, the arrows will size with the font */
+  width: 0.4em;
+  height: 0.4em;
+  border-right: 0.15em solid #08415c;
+  border-top: 0.15em solid #08415c;
+  transform: rotate(45deg);
+  margin-left: 0.2em;
+}
+
+/*
+
+.title {
+  background-color: #9a94bc;
+  width: 100%;
+  margin: 0 auto;
+  color: white;
+  padding: 8px 25px;
+  position: fixed;
+  top: 40px;
+  left: 0;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+  text-align: right;
+  box-sizing: border-box;
+  z-index: 4;
+  display: none;
+}
+
+*/

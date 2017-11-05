@@ -19,7 +19,7 @@
   <header>
     <div id="banner" class="novena">
       <?php require_once(PRIVATE_PATH . '/date.php'); ?>
-      <div class="date"><?php echo $fecha ?></div>
-      <div class="day"><?php echo $dias ?></div>
+      <div class="date"><?php echo $todays_date ?></div>
+      <div class="day"><?php echo $today_is ?></div>
     </div>
   </header>

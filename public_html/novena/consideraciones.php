@@ -1,4 +1,4 @@
-<?php require_once("../private/initialize.php"); ?>
+<?php require_once("../../private/novena/initialize.php"); ?>
 <?php 
 
 $dia = isset($_GET['c']) ? $_GET['c'] : '' ;
@@ -7,7 +7,7 @@ $json = file_get_contents('js/consideraciones.json');
 $consideraciones = json_decode($json, true);
 
 ?>
-<?php require_once("../private/header.php"); ?>
+<?php require_once("../../private/novena/header.php"); ?>
 
 
   <div class="hero">
@@ -22,5 +22,5 @@ $consideraciones = json_decode($json, true);
   
   <div class="next"><a href="oraciones.php?o=2" class="next_lk">Oraci&oacute;n a la Sant&iacute;sima Virgen</a></div>
   
-<?php require_once("../private/footer.php"); ?>
+<?php require_once("../../private/novena/footer.php"); ?>
  

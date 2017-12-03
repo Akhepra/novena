@@ -8,7 +8,6 @@ session_start(); // turn on sessions
 // url requires localhost location
 
 // for the links that require HD location
-// CHECK FUNCIONALITY ON SERVER
 define("PRIVATE_PATH", dirname(__FILE__));
 define("PROJECT_PATH", dirname(PRIVATE_PATH));
 define("PUBLIC_PATH", PROJECT_PATH . '/public');
@@ -17,11 +16,11 @@ define("PUBLIC_PATH", PROJECT_PATH . '/public');
 
 // for the links that require localhost location
 // COMMENT FOR DEPLOY
-//$novena_end = strpos($_SERVER['SCRIPT_NAME'], '/novena') + 7;
-//$doc_root = substr($_SERVER['SCRIPT_NAME'], 0, $novena_end);
-//define("WWW_ROOT", $doc_root);
+$novena_end = strpos($_SERVER['SCRIPT_NAME'], '/novena') + 7;
+$doc_root = substr($_SERVER['SCRIPT_NAME'], 0, $novena_end);
+define("WWW_ROOT", $doc_root);
 
 // UNCOMMENT FOR DEPLOY
-define("WWW_ROOT", '');
+//define("WWW_ROOT", '');
 
 require_once('functions.php');

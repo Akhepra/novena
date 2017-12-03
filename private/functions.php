@@ -6,7 +6,7 @@ function url_for($script_path) {
     $script_path = "/" . $script_path;
   }
   // COMMENT FOR DEPLOY
-  return WWW_ROOT . "/public_html/novena" . $script_path;
+//  return WWW_ROOT . "/public" . $script_path;
   
   return WWW_ROOT . $script_path;
 }

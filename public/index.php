@@ -1,4 +1,4 @@
-<?php require_once("../../private/novena/initialize.php"); ?>
+<?php require_once("../private/initialize.php"); ?>
 <?php 
 
 $oracion = 1 ;
@@ -7,7 +7,7 @@ $json = file_get_contents('js/oraciones.json');
 $oraciones = json_decode($json, true);
 
 ?>
-<?php require_once("../../private/novena/header.php"); ?>
+<?php require_once("../private/header.php"); ?>
 <?php
 
 if ($todays_date === '') {
@@ -42,4 +42,4 @@ if ($todays_date === '') {
 
   <?php echo $consideraciones ?>
 
-  <?php require_once("../../private/novena/footer.php"); ?>
+  <?php require_once("../private/footer.php"); ?>

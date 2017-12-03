@@ -1,4 +1,4 @@
-<?php require_once("../../../private/novena/initialize.php"); ?>
+<?php require_once("../../private/initialize.php"); ?>
 <?php
 
 $close = true;
@@ -16,27 +16,29 @@ if (isset($_SERVER['HTTP_REFERER'])) {
 
   <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Oraci&oacute;n al Padre nuestro">
+    <meta name="description" content="Oraci&oacute;n a la V&iacute;rgen Mar&iacute;a">
     <meta name="keywords" content="HTML,CSS,XML,JavaScript">
     <meta name="author" content="Akhepra">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oraci&oacute;n al Padre nuestro</title>
+    <title>Oraci&oacute;n a la V&iacute;rgen Mar&iacute;a</title>
     <link rel="stylesheet" type="text/css" media="screen" href="../css/prayer.css">
   </head>
 
   <body>
-    <h3>Padre nuestro</h3>
+    <h3>Ave Mar&iacute;a</h3>
     <p class="action"><em>Reza</em></p>
-    <p>Padre nuestro,</p>
-    <p>que est&aacute;s en el cielo,</p>
-    <p>santificadosea tu Nombre;</p>
-    <p>venga a nosotros tu reino;</p>
-    <p>h&aacute;gase tu voluntad en la tierra como en el cielo.</p>
+    <p>Dios te salve Mar&iacute;a</p>
+    <p>lena eres de gracias</p>
+    <p>el Se&ntilde;or est&aacute; contigo;</p>
+    <p>bendita t&uacute; eres entre todas las mujeres,</p>
+    <p>y bendito es el fruto de tu vientre,</p>
+    <p>Jes&uacute;s.</p>
     <p class="action"><em>Responso</em></p>
-    <p class="answer">Danos hoy nuestro pan de cada d&iacute;a;</p>
-    <p class="answer">perdona nuestras ofensas como tambi&eacute;n nosotros perdonamos a los que nos ofenden;</p>
-    <p class="answer">no nos dejes caer en la tentaci&oacute;n,</p>
-    <p class="answer">y l&iacute;branos del mal.</p>
+    <p class="answer">Santa Mar&iacute;a,</p>
+    <p class="answer">Madre de Dios,</p>
+    <p class="answer">ruega por nosotros, pecadores,</p>
+    <p class="answer">ahora y en la ahora de nuestra muerte.</p>
+    <p class="amen">Am&eacute;n</p>
     <?php
   
   if ($close) {

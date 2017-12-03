@@ -1,4 +1,4 @@
-<?php require_once("../../private/novena/initialize.php"); ?>
+<?php require_once("../private/initialize.php"); ?>
 <?php 
 
 $oracion = isset($_GET['o']) ? ($_GET['o']) : 2 ;
@@ -25,7 +25,7 @@ if ($short_name === 'o_san_jose') {
 
 
 ?>
-<?php require_once("../../private/novena/header.php"); ?>
+<?php require_once("../private/header.php"); ?>
 
 
 <div class="hero">
@@ -61,4 +61,4 @@ if ($short_name !== 'o_divino_nino') {
 
 ?>
 
-  <?php require_once("../../private/novena/footer.php"); ?>
+  <?php require_once("../private/footer.php"); ?>

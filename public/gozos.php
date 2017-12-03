@@ -1,6 +1,6 @@
-<?php require_once("../../private/novena/initialize.php"); ?>
+<?php require_once("../private/initialize.php"); ?>
 
-<?php require_once("../../private/novena/header.php"); ?>
+<?php require_once("../private/header.php"); ?>
 
 
 <div class="hero">
@@ -41,4 +41,4 @@
 
 <div class="next"><a href="oraciones.php?o=4">Oraci&oacute;n al Divino Ni&ntilde;o Jes&uacute;s</a></div>
 
-<?php require_once("../../private/novena/footer.php"); ?>
+<?php require_once("../private/footer.php"); ?>

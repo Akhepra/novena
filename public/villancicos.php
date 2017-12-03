@@ -1,4 +1,4 @@
-<?php require_once("../../private/novena/initialize.php"); ?>
+<?php require_once("../private/initialize.php"); ?>
 
 <!DOCTYPE html>
 

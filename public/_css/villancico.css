@@ -1,0 +1,102 @@
+body {
+  color: var(--purple);
+}
+
+p {
+  /*  margin-top: 0;*/
+  margin-bottom: 0;
+  line-height: 2rem;
+}
+
+.chorus {
+  font-style: italic;
+  font-weight: 700;
+  color: var(--pink)
+}
+
+/*-----     HEADER     -----*/
+
+.date-header {
+  color: var(--pink);
+  background-color: var(--purple);
+}
+
+.hero {
+  background-color: var(--purple);
+}
+
+h1 {
+  color: var(--pink);
+  padding-top: 50px;
+}
+
+
+
+/*-----     CONTENT     -----*/
+
+.chamfer {
+  background: url(../_images/chamfer_purple@2x.png);
+  -webkit-background-size: 100%;
+}
+
+
+
+
+article {
+
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-flow: column;
+  -moz-flex-flow: column;
+  -ms-flex-flow: column;
+  -o-flex-flow: column;
+  flex-flow: column;
+}
+
+
+
+/*-----     FOOTER     -----*/
+
+.next input {
+  color: white;
+  font-family: "Avenir Next Condensed";
+  font-size: 1.8rem;
+  background: transparent url(../_images/btn_pause.svg) right 4px no-repeat;
+  -webkit-background-size: 25px;
+  background-size: 25px;
+  padding-right: 35px;
+  border: none;
+  outline: none;
+}
+
+input.play {
+  background: transparent url(../_images/btn_play.svg) right 4px no-repeat;
+  -webkit-background-size: 25px;
+  background-size: 25px;
+}
+
+
+.next.only {
+  background: transparent url(../_images/chamfer_white_o_pink@3x.png) top center no-repeat;
+  -webkit-background-size: 100%;
+  padding-bottom: 10px;
+  z-index: 5;
+}
+
+.next.up {
+  background-color: var(--pink);
+  background: transparent url(../_images/chamfer_white_o_pink@3x.png) top center no-repeat;
+  -webkit-background-size: 100%;
+  bottom: 85px;
+  padding: 45px 25px 0px;
+  margin-bottom: ;
+}
+
+.next.down {
+  background: var(--purple) url(../_images/chamfer_pink_o_purple@3x.png) top center no-repeat;
+  -webkit-background-size: 100%;
+  padding: 40px 25px 5px;
+}

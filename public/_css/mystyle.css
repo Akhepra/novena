@@ -1,0 +1,165 @@
+/*-----     COLORS     -----*/
+
+:root {
+  --purple: #6E27AC;
+  --pink: #E106AA;
+  --red: #B5002C;
+  --orange: #EF6461;
+  --dark_blue: #322F60;
+  --lila: #C490D1;
+  --green: #388697;
+  --light_green: #B5FFE1;
+}
+
+
+/*-----     FONTS     -----*/
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,500i,600');
+
+@font-face {
+  font-family: 'Avenir Next Condensed DemiBold';
+  src: url('../_fonts/ancdb.ttf');
+}
+
+@font-face {
+  font-family: 'Avenir Next Condensed Medium';
+  src: url('../_fonts/ancm.ttf');
+}
+
+@font-face {
+  font-family: 'Avenir Next Condensed UltraLight';
+  src: url('../_fonts/ancul.ttf');
+}
+
+@font-face {
+  font-family: 'Avenir Next UltraLight';
+  src: url('../_fonts/anul.ttf');
+}
+
+
+/*-----     GENERAL     -----*/
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 2.5rem;
+  min-width: 300px;
+  margin-bottom: 70px;
+}
+
+article {
+  padding: 10px 10vw;
+}
+
+h2 {
+  font-family: 'Avenir Next Condensed';
+  font-size: 2rem;
+  line-height: 2.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding-top: 100px;
+}
+
+.amen {
+  font-family: "Avenir Next Condensed";
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 2rem;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-family: 'Avenir Next Condensed Medium';
+  margin: 0;
+  padding: 40vh 10vw 0px;
+  line-height: 2.8rem;
+}
+
+
+.date-header {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  padding: 0 10vw 0;
+  justify-content: space-between;
+}
+
+
+
+/*-----     CHECK     -----*/
+
+.chamfer {
+  float: left;
+  width: 100%;
+  height: 100px;
+}
+
+/* check if consideraciones is general */
+
+.pray_link,
+.list a {
+  padding: 3px 15px;
+  font-weight: 500;
+  line-height: 3rem;
+  text-decoration: none;
+  border: 2px solid var(--pink);
+  border-radius: 19.5px;
+  color: var(--pink);
+}
+
+.list ul {
+  list-style-type: none;
+  padding-left: 0;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -moz-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  -o-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+.list li {
+  margin-right: 5px;
+}
+
+
+/*-----     FOOTER     -----*/
+
+.next {
+  display: none;
+  box-sizing: border-box;
+  padding: 60px 25px 15px;
+  width: 100vw;
+  min-width: 300px;
+  position: fixed;
+  bottom: 0;
+  text-align: right;
+  font-family: "Avenir Next Condensed";
+}
+
+.next a {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.next a::after {
+  content: "";
+  display: inline-block;
+  /* By using an em scale, the arrows will size with the font */
+  width: 0.4em;
+  height: 0.4em;
+  border-right: 0.15em solid #FFFFFF;
+  border-top: 0.15em solid #FFFFFF;
+  transform: rotate(45deg);
+  margin-left: 0.2em;
+}

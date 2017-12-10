@@ -6,21 +6,26 @@ setlocale(LC_TIME, "es_ES");
 // initialize date variable
 $date = time();
 
-// TESTING CODE
-// if url has variable "d" simulates a novena day
-if (isset($_GET['d'])) {
-  $date = mktime(0, 0, 0, 12, $_GET['d'], 2017);
-}
+////////////////////////////////////////// TESTING CODE
+//$date = mktime(0, 0, 0, 12, 18, 2017);
+//echo '</br>';
+// show date and hour
+//echo strftime('%a, %b %e - %r / %Z', $date);
 
 // process date parts
 $day = date('d', $date);
 $month = date('m', $date);
 $year = date('Y', $date);
-$start = mktime(0, 0, 0, 12, 16, $year);
-$daysTo = round(($start - $date) / (60 * 60 * 24));
 
-// initializes today's date
-$todays_date = "";
+// adjust year if it past december 24 of the same year
+if ($month == 12 && $day > 24) {
+  $year += 1;
+}
+
+// sets the starting date for the next novena and the days to 
+$start = mktime(0, 0, 0, 12, 16, $year);
+$end = mktime(23, 59, 59, 12, 24, $year);
+$days_to = round(($start - $date) / (60 * 60 * 24));
 
 // novena's names array
 $novena = [
@@ -35,15 +40,36 @@ $novena = [
   "24"=>["noveno", 9]
 ];
 
+
 // analize date
 // if today is part of novena sets info
-if ($month == 12 && $day > 15 && $day < 25) {
+if ($start < $date && $date < $end) {
+  
   $todays_date = htmlentities(ucwords(strftime('%a, %b %e', $date)));
   $today_is = htmlentities("Día ") . htmlentities($novena[$day][0]);
-} elseif ($month == 12 && $day > 24) {
-  // if it just happen
-  $today_is = "Acab&oacute; de pasar";
+  
+  $graph = '';
+  
+  $left = $todays_date;
+  $right = $today_is;
+  
+  $class = 'date-header';
+  
 } else {
+  
+  $number = ($days_to == 1) ? 'singular' : 'plural';
+  
+  $left = "";
   // how many days are missing
-  $today_is = "Faltan " . $daysTo . " d&iacute;as";
+  $right = '<span>';
+  $right .= $number == 'singular' ? 'Falta' : 'Faltan';
+  $right .= ' </span><span>' . $days_to . '</span><span> ';
+  $right .= $number == 'singular' ? 'd&iacute;a' : 'd&iacute;as';
+  $graph = '<svg id="pie"><path /></svg>';
+
+  $class = 'almost';
+  
 }
+
+$date_header = '<div class="date">' . $left . '</div>';
+$date_header .= '<div class="day">'. $right . '</div>';

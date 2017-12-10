@@ -13,12 +13,12 @@ function url_for($script_path) {
 
 function create_consideraciones_list($days) {
   
-  $output = '<article><h2>Consideraciones para todos los d&iacute;as</h2><ul>';
+  $output = '<article class="list"><h2>Consideraciones para todos los d&iacute;as</h2><ul>';
 
   foreach ($days as $key => $value) {
     $output .= '<li><a href="consideraciones.php?c=';
     $output .= $value[1];
-    $output .= '">D&iacute;a ';
+    $output .= '">D&iacute;a&nbsp;';
     $output .= $value[0];
     $output .= '</a></li>';
   }
@@ -27,4 +27,23 @@ function create_consideraciones_list($days) {
   return $output;
 }
 
-?>
+
+function css($filename) {
+  
+  $output = '<link rel="stylesheet" type="text/css" media="screen"';
+  $output .= 'href="';
+  $output .= url_for('/_css/'. $filename . '.css">');
+  
+  return $output;
+  
+}
+
+
+function script($filename) {
+  
+  $output = '<script type="text/javascript" src="';
+  $output .= url_for('/_js/'. $filename . '.js"></script>');
+  
+  return $output;
+  
+}

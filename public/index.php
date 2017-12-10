@@ -3,28 +3,49 @@
 
 $oracion = 1 ;
 
-$json = file_get_contents('js/oraciones.json');
+$json = file_get_contents('_js/oraciones.json');
 $oraciones = json_decode($json, true);
 
-?>
-<?php require_once("../private/header.php"); ?>
-<?php
-
-if ($todays_date === '') {
+if ($class == 'almost') {
   $consideraciones = create_consideraciones_list($novena);
 } else {
   $consideraciones = '<div class="next"><a class="next_lk" href="consideraciones.php?c=';
-  $consideraciones .= $days[$day][1];
-  $consideraciones .= '">Consideraciones para el ';
-  $consideraciones .= strtolower($dias);
+  $consideraciones .= $novena[$day][1];
+  //$consideraciones .= '">Consideraciones para el ';
+  $consideraciones .= '">';
+//  $consideraciones .= strtolower($today_is);
+  $consideraciones .= $today_is;
   $consideraciones .= '</a></div>';
 }
 
 ?>
 
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+  <?php require_once(PRIVATE_PATH . '/head.php'); ?>
+  <?php echo css('index') ?>
+  <?php if ($class == 'date-header') {echo css('novena');} ?>
+  <?php echo script('index') ?>
+</head>
+
+<body>
+  <header>
+
+    <div class="<?php echo $class ?>">
+      <?php echo $date_header ?>
+      <?php echo $graph ?>
+    </div>
+
+  </header>
+
   <div class="hero">
-    <h1>Novena de Aguinaldos</h1>
+    <h1><span>Novena</span> <span>de Aguinaldos</span></h1>
   </div>
+
+  <div class="chamfer"></div>
 
   <article class="<?php echo $oraciones[$oracion]['short_name']; ?>">
     <h2>
@@ -38,8 +59,15 @@ if ($todays_date === '') {
     </p>
   </article>
 
-  <div class="chamfer"></div>
 
-  <?php echo $consideraciones ?>
 
-  <?php require_once("../private/footer.php"); ?>
+  <footer>
+    <?php echo $consideraciones ?>
+    <div class="next">
+      <a href="villancicos.php">Villancicos</a>
+    </div>
+  </footer>
+
+</body>
+
+</html>

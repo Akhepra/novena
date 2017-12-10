@@ -13,7 +13,6 @@ define("PROJECT_PATH", dirname(PRIVATE_PATH));
 define("PUBLIC_PATH", PROJECT_PATH . '/public');
 //define("SHARED_PATH", PRIVATE_PATH . '/shared');
 
-
 // for the links that require localhost location
 // COMMENT FOR DEPLOY
 $novena_end = strpos($_SERVER['SCRIPT_NAME'], '/novena') + 7;
@@ -24,3 +23,4 @@ define("WWW_ROOT", $doc_root);
 //define("WWW_ROOT", '');
 
 require_once('functions.php');
+require_once('date.php');

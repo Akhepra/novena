@@ -21,7 +21,7 @@ if (isset($_SERVER['HTTP_REFERER'])) {
     <meta name="author" content="Akhepra">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oraci&oacute;n Gloria al Padre</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="../css/prayer.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../_css/prayer.css">
   </head>
 
   <body>

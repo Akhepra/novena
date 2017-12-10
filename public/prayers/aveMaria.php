@@ -9,6 +9,7 @@ if (isset($_SERVER['HTTP_REFERER'])) {
   $close = false;
 }
 
+
 ?>
 
   <!doctype html>
@@ -21,14 +22,14 @@ if (isset($_SERVER['HTTP_REFERER'])) {
     <meta name="author" content="Akhepra">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oraci&oacute;n a la V&iacute;rgen Mar&iacute;a</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="../css/prayer.css">
+    <?php echo css('prayer'); ?>
   </head>
 
   <body>
     <h3>Ave Mar&iacute;a</h3>
     <p class="action"><em>Reza</em></p>
     <p>Dios te salve Mar&iacute;a</p>
-    <p>lena eres de gracias</p>
+    <p>llena eres de gracias</p>
     <p>el Se&ntilde;or est&aacute; contigo;</p>
     <p>bendita t&uacute; eres entre todas las mujeres,</p>
     <p>y bendito es el fruto de tu vientre,</p>

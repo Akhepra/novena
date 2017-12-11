@@ -19,12 +19,19 @@
 
 
   <style>
-    .next {
+    .next.down {
+      /*      border: 1px solid #000;*/
       display: none;
       box-sizing: border-box;
-      padding: 60px 25px 15px;
+      /*      padding: 60px 25px 18px;*/
+      padding: 0;
+
+      padding-top: 40px;
+      padding-right: 25px;
+
       width: 100vw;
       min-width: 300px;
+      height: 90px;
       position: fixed;
       bottom: 0;
       text-align: right;
@@ -50,13 +57,40 @@
       margin-left: 0.2em;
     }
 
-    .next:last-of-type {
-      background-color: var(--purple);
-      background: transparent url(_images/chamfer_white_o_pink@3x.png) top center no-repeat;
+    .next.down {
+      background-color: none;
+      background: transparent url(_images/chamfer_white_o_pink_t.svg) top center no-repeat;
       -webkit-background-size: 100%;
     }
 
+    .next.up {
+      /*      background-color: none;*/
+      background: transparent url(_images/chamfer_white_o_pink_up.png) top center no-repeat;
+      -webkit-background-size: 100%;
+      padding-top: 30px;
+      padding-right: 25px;
+      height: 70px;
+      bottom: 90px;
+      /*      border: 1px solid #000;*/
+    }
+
   </style>
+
+  <script>
+    /*global $*/
+    $(function() {
+      'use strict';
+
+      var $next = $('.next');
+
+      console.log($next.last().outerWidth());
+      console.log($next.last().outerHeight());
+      console.log($next.last().width());
+      console.log($next.last().height());
+
+    });
+
+  </script>
 
 
 
@@ -105,8 +139,11 @@
         <li><a href="consideraciones.php?c=9">D&iacute;a&nbsp;noveno</a></li>
       </ul>
     </article>
-    <div class="next">
-      <a href="villancicos.php">Villancicos</a>
+    <div class="next up">
+      <a href="villancicos.php">Vocal</a>
+    </div>
+    <div class="next down">
+      <a href="villancicos.php">Oraci&oacute;n a la Sant&iacute;sima Virgen</a>
     </div>
   </footer>
 

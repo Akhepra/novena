@@ -12,7 +12,13 @@ $villancicos = json_decode($json, true);
 
 <head>
   <?php require_once(PRIVATE_PATH . "/head.php"); ?>
-  <?php echo css('villancicos') ?>
+  <?php echo css('creditos') ?>
+  <style>
+    body {
+      font-size: .8em;
+    }
+
+  </style>
 </head>
 
 <body>
@@ -23,28 +29,41 @@ $villancicos = json_decode($json, true);
   </header>
 
   <div class="hero">
-    <h1>Villancicos</h1>
+    <h1>Cr&eacute;ditos</h1>
   </div>
 
   <div class="chamfer"></div>
 
-  <article class="list">
+  <article class="songs">
+    <h2>Canciones</h2>
     <ul>
       <?php 
-      foreach($villancicos as $key => $villancico) {    
-        $output = '<li><a href=" villancico.php?v=' . $key . ' ">';
-        $output .= $villancico['name'];
-        $output .= '</a></li>';
-        echo $output;
-      }
+  
+ 
+      
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
       ?>
     </ul>
   </article>
 
 
   <footer>
-    <div class="next down">
-      <a href="creditos.php " class="next_lk ">Cr&eacute;ditos</a>
+    <div class="next">
+      <a href="http://www.akhepra.co" class="next_lk">dise&ntilde;ado por</a>
     </div>
   </footer>
 

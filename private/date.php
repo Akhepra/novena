@@ -7,10 +7,16 @@ setlocale(LC_TIME, "es_ES");
 $date = time();
 
 ////////////////////////////////////////// TESTING CODE
-//$date = mktime(0, 0, 0, 12, 18, 2017);
-//echo '</br>';
-// show date and hour
-//echo strftime('%a, %b %e - %r / %Z', $date);
+
+if (isset($_GET['d'])) {
+  $test_date = $_GET['d'] ?? '';
+  $test_date_array = explode("-", $test_date);
+//  $date = mktime(0, 0, 0, $test_date_array[1], $test_date_array[2], $test_date_array[0]);
+  $date = mktime($test_date_array[3], $test_date_array[4], $test_date_array[5], $test_date_array[1], $test_date_array[2], $test_date_array[0]);
+  
+  // show date and hour
+  //echo strftime('%a, %b %e - %r / %Z', $date);
+}
 
 // process date parts
 $day = date('d', $date);

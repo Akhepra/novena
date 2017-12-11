@@ -9,7 +9,7 @@ $oraciones = json_decode($json, true);
 if ($class == 'almost') {
   $consideraciones = create_consideraciones_list($novena);
 } else {
-  $consideraciones = '<div class="next"><a class="next_lk" href="consideraciones.php?c=';
+  $consideraciones = '<div class="next up"><a class="next_lk" href="consideraciones.php?c=';
   $consideraciones .= $novena[$day][1];
   //$consideraciones .= '">Consideraciones para el ';
   $consideraciones .= '">';
@@ -63,7 +63,7 @@ if ($class == 'almost') {
 
   <footer>
     <?php echo $consideraciones ?>
-    <div class="next">
+    <div class="next down">
       <a href="villancicos.php">Villancicos</a>
     </div>
   </footer>

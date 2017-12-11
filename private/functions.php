@@ -47,3 +47,52 @@ function script($filename) {
   return $output;
   
 }
+
+
+function get_files_list($folder) {
+  $complete_file_list = scandir($folder);
+  //remove trash
+  $file_list = array_diff($complete_file_list, ['.', '..']);
+  return $file_list;
+}
+
+
+function get_singers_amd_songs($villancicos) {
+
+  $singers = [];
+  foreach ($villancicos as $villancico) {
+    $singers[] = $villancico['vocal_credits'];
+    $singers[] = $villancico['instrumental_credits'];
+  }
+
+  $unique_singers = array_unique($singers);
+
+  sort($unique_singers);
+
+  $songs_list = get_files_list('audio');
+  $singers_and_songs = [];
+
+  foreach ($unique_singers as $singer) {
+
+    $songs =[];
+
+    foreach ($villancicos as $villancico) {
+
+      if ($villancico['vocal_credits'] === $singer && in_array($villancico['vocal'] . '.mp3', $songs_list)) { 
+        $songs[] = $villancico['name'] . ' - vocal';
+      }
+
+      if ($villancico['instrumental_credits'] === $singer && in_array($villancico['instrumental'] . '.mp3', $songs_list)) { 
+        $songs[] = $villancico['name'] . ' - instrumental';
+      }
+
+    }
+
+    if (!empty($songs)) {
+      $singers_and_songs[$singer] = $songs;
+    }
+
+  }
+
+  return $singers_and_songs;
+}

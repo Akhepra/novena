@@ -1,6 +1,6 @@
 h1 {
   color: var(--orange);
-  background: transparent url(../_images/consideraciones.svg) no-repeat center 7vh;
+  background: transparent url(../_icons/consideraciones.svg) no-repeat center 7vh;
   -webkit-background-size: 20vh;
   background-size: 20vh;
   font-size: 1.8em;
@@ -21,10 +21,10 @@ body {
 
 
 
-/*-----     CHECK     -----*/
+/*-----     CONTENT     -----*/
 
 .chamfer {
-  background: url(../_images/chamfer_red@2x.png);
+  background: url(../_images/chamfer_red.png);
   -webkit-background-size: 100%;
 }
 
@@ -32,11 +32,14 @@ body {
 
 /*-----     FOOTER     -----*/
 
-.next:last-of-type {
-  background-color: var(--red);
-  background: transparent url(../_images/chamfer_white_o_red@3x.png) top center no-repeat;
+.next {
+  background: transparent url(../_images/chamfer_white_o_orange.png) top center no-repeat;
   -webkit-background-size: 100%;
-  padding-bottom: 10px;
+  padding-top: 53px;
+}
+
+.next a {
+  font-size: 1.6rem;
 }
 
 .date-header {

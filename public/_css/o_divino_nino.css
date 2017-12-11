@@ -1,39 +1,36 @@
 h1 {
-  background: transparent url(../_images/o_divino_nino.svg) no-repeat center 7vh;
+  background: transparent url(../_icons/o_divino_nino.svg) no-repeat center 7vh;
 }
 
-
-/*-----     FOOTER     -----*/
-
-.next:last-of-type {
-  background: var(--purple) url(../_images/chamfer_dark_blue_o_lila@3x.png) top center no-repeat;
-  -webkit-background-size: 100%;
-
-  padding: 35px 25px 10px;
-}
-
-.next:first-of-type {
-  background-color: var(--pink);
-  background: transparent url(../_images/chamfer_white_o_dark_blue@3x.png) top center no-repeat;
-  -webkit-background-size: 100%;
-}
-
-.next:first-of-type {
-  /*  display: none;*/
-  box-sizing: border-box;
-  padding: 45px 25px 0px;
-  width: 100vw;
-  min-width: 300px;
-  position: fixed;
-  bottom: 87px;
-  text-align: right;
-  font-family: "Avenir Next Condensed";
-}
+/*-----     CONTENT     -----*/
 
 article:last-of-type {
   margin-bottom: 150px;
 }
 
-.next:first-of-type a::after {
+
+
+/*-----     FOOTER     -----*/
+
+.next.up {
+  background: transparent url(../_images/chamfer_white_o_lila_up.png) top center no-repeat;
+  -webkit-background-size: 100%;
+  padding-top: 40px;
+}
+
+.next.down {
+  background: var(--purple) url(../_images/chamfer_lila_o_dark_blue.png) top center no-repeat;
+  -webkit-background-size: 100%;
+  padding-top: 35px;
+}
+
+.next.down a {
+  color: white;
+}
+
+.next.down a::after {
   border-color: white;
 }
+
+/*
+

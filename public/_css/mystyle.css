@@ -9,6 +9,7 @@
   --lila: #C490D1;
   --green: #388697;
   --light_green: #B5FFE1;
+  --strong_green: #94d31b;
 }
 
 
@@ -90,15 +91,13 @@ h1 {
 
 
 
-/*-----     CHECK     -----*/
+/*-----     CONTENT     -----*/
 
 .chamfer {
   float: left;
   width: 100%;
-  height: 100px;
+  height: 67px;
 }
-
-/* check if consideraciones is general */
 
 .pray_link,
 .list a {
@@ -136,9 +135,12 @@ h1 {
 .next {
   display: none;
   box-sizing: border-box;
-  padding: 60px 25px 15px;
+  /*  padding: 60px 25px 15px;*/
+  padding-top: 40px;
+  padding-right: 25px;
   width: 100vw;
   min-width: 300px;
+  height: 100px;
   position: fixed;
   bottom: 0;
   text-align: right;
@@ -162,4 +164,15 @@ h1 {
   border-top: 0.15em solid #FFFFFF;
   transform: rotate(45deg);
   margin-left: 0.2em;
+}
+
+.next.up {
+  padding-top: 30px;
+  padding-right: 25px;
+  height: 80px;
+  bottom: 90px;
+}
+
+.next.down {
+  height: 90px;
 }

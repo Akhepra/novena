@@ -13,6 +13,11 @@ $villancicos = json_decode($json, true);
 <head>
   <?php require_once(PRIVATE_PATH . "/head.php"); ?>
   <?php echo css('creditos') ?>
+
+  <style>
+
+
+  </style>
 </head>
 
 <body>
@@ -41,45 +46,53 @@ $villancicos = json_decode($json, true);
     <p>Patricia Sanmiguel de Ayala</p>
   </article>
 
-  <article class="songs">
+  <article>
     <h2>Canciones</h2>
-    <ul>
+    <ul class="songs">
       <?php 
-      foreach($villancicos as $key => $villancico) {
-        $inst_file = "audio/" . $villancico['instrumental'] . '.mp3';
-        $vocal_file = "audio/" . $villancico['vocal'] . '.mp3';
-        
-        if (file_exists($vocal_file) || file_exists($inst_file)) {
-          $output = "";
-          
-          if (file_exists($vocal_file)) {
-            $output .= '<li class="song"><ul>';
-            $output .= '<li>' . str_replace("_"," ", $villancico['credit_vocal']) . '</li>';
-            $output .= '<li>' . str_replace("&nbsp;"," ",$villancico['name']) . ' - vocal</li>';
-            $output .= '</ul></li>';
-          }
-          if (file_exists($inst_file)) {
-            $output .= '<li class="song"><ul>';
-            $output .= '<li>' . str_replace("_"," ", $villancico['credit_inst']) . '</li>';
-            $output .= '<li>' . str_replace("&nbsp;"," ",$villancico['name']) . ' - instrumental</li>';
-            $output .= '</ul></li>';
-          }
-          echo $output;
+      foreach (get_singers_amd_songs($villancicos) as $singer => $songs) {
+        $output = '<li class="singer">';
+        $output .= $singer;
+        $output .= '<ul>';
+        foreach ($songs as $song) {
+          $output .= '<li>';
+          $output .= $song;
+          $output .= '</li>';
         }
+        $output .= '</ul>';
+        $output .= '</li>';
+        
+        echo $output;
       }
       ?>
     </ul>
   </article>
 
   <article>
-    <h2>Iconos</h2>
-    <p>Lista en construcci&oacute;n</p>
+    <h2>&Iacute;conos</h2>
+
+    <section class="icons">
+      <?php
+      
+      $icons_list = get_files_list('_icons');
+      
+      foreach ($icons_list as $icon) {
+        
+        echo '<div class="icon">'. file_get_contents('_icons/' . $icon)  .'</div>';
+        
+      }
+      
+      ?>
+    </section>
+
+
+    <div class="freepik">&Iacute;conos hechos por <a href="http://www.freepik.com" title="Freepik">Freepik</a> para <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> licenciados <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
   </article>
 
 
   <footer>
     <div class="next">
-      <a href="www.akhepra.co" class="next_lk">Akhepra</a>
+      <a href="http://www.akhepra.co" class="next_lk">dise&ntilde;ado por</a>
     </div>
   </footer>
 

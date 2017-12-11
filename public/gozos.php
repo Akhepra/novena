@@ -56,7 +56,7 @@
   </article>
 
   <footer>
-    <div class="next">
+    <div class="next down">
       <a href="oraciones.php?o=4">Oraci&oacute;n al Divino Ni&ntilde;o Jes&uacute;s</a>
     </div>
   </footer>

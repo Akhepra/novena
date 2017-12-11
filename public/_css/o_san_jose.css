@@ -1,3 +1,7 @@
 h1 {
-  background: transparent url(../_images/o_san_jose.svg) no-repeat center 7vh;
+  background: transparent url(../_icons/o_san_jose.svg) no-repeat center 7vh;
+}
+
+.next {
+  padding-top: 40px;
 }

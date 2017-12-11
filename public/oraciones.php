@@ -78,10 +78,10 @@ if ($short_name !== 'o_divino_nino') {
 
 } else {
   
-   $output = '<div class="next">';
+   $output = '<div class="next up">';
    $output .= '<a class="next_lk" href="villancicos.php">';
    $output .= 'Villancicos</a></div>';
-   $output .= '<div class="next">';
+   $output .= '<div class="next down">';
    $output .= '<a href="creditos.php">Cr&eacute;ditos</a>';
    $output .= '</div>';
   

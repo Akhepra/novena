@@ -65,6 +65,7 @@ if ($start < $date && $date < $end) {
   $right .= $number == 'singular' ? 'Falta' : 'Faltan';
   $right .= ' </span><span>' . $days_to . '</span><span> ';
   $right .= $number == 'singular' ? 'd&iacute;a' : 'd&iacute;as';
+  $right .= '</span>';
   $graph = '<svg id="pie"><path /></svg>';
 
   $class = 'almost';

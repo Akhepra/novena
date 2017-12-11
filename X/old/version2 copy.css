@@ -1,0 +1,10 @@
+
+
+.chamfer {
+  float: left;
+  width: 100%;
+  height: 100px;
+  background: url(../public/_images/chamfer_purple@2x.png);
+  -webkit-background-size: 100%;
+}
+

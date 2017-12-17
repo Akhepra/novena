@@ -1,4 +1,6 @@
 <?php require_once("../private/initialize.php"); ?>
+<?php require_once("../private/date.php"); ?>
+
 <?php 
 
 $oracion = 1 ;
@@ -35,7 +37,7 @@ if ($class == 'almost') {
   <header>
 
     <div class="<?php echo $class ?>">
-      <?php echo $date_header ?>
+      <?php echo $date_header ?? $_SESSION['date-header'] ?>
       <?php echo $graph ?>
     </div>
 

@@ -13,7 +13,7 @@
   <header>
 
     <div class="date-header">
-      <?php echo $date_header ?>
+      <?php echo $date_header ?? $_SESSION['date-header'] ?>
     </div>
 
   </header>

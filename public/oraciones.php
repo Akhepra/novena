@@ -39,7 +39,7 @@ if ($short_name === 'o_san_jose') {
 <body>
   <header>
     <div class="date-header">
-      <?php echo $date_header ?>
+      <?php echo $date_header ?? $_SESSION['date-header'] ?>
     </div>
   </header>
 

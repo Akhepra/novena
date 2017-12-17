@@ -9,10 +9,11 @@ $date = time();
 ////////////////////////////////////////// TESTING CODE
 
 if (isset($_GET['d'])) {
-  $test_date = $_GET['d'] ?? '';
-  $test_date_array = explode("-", $test_date);
-  $date = mktime(0, 0, 0, $test_date_array[1], $test_date_array[2], $test_date_array[0]);
 
+  $test_date = strtotime(substr($_GET['d'], 0, 25));
+
+} else {
+  exit;
 }
 
 // process date parts
@@ -20,6 +21,8 @@ $day = date('d', $date);
 $month = date('m', $date);
 $year = date('Y', $date);
 
+// hard copy
+//$date = mktime(0, 0, 8, 12, 16, 2017);
 
 // adjust year if it past december 24 of the same year
 if ($month == 12 && $day > 24) {
@@ -78,3 +81,5 @@ if ($start < $date && $date < $end) {
 
 $date_header = '<div class="date">' . $left . '</div>';
 $date_header .= '<div class="day">'. $right . '</div>';
+
+$_SESSION['date-header'] = $date_header;

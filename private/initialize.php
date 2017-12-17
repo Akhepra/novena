@@ -17,10 +17,11 @@ define("PUBLIC_PATH", PROJECT_PATH . '/public');
 // COMMENT FOR DEPLOY
 $novena_end = strpos($_SERVER['SCRIPT_NAME'], '/novena') + 7;
 $doc_root = substr($_SERVER['SCRIPT_NAME'], 0, $novena_end);
-define("WWW_ROOT", $doc_root);
 
 // UNCOMMENT FOR DEPLOY
-//define("WWW_ROOT", '');
+//$doc_root = '';
+
+define("WWW_ROOT", $doc_root);
 
 require_once('functions.php');
-require_once('date.php');
+//require_once('date.php');

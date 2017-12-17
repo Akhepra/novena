@@ -1,28 +1,15 @@
 /*-----     FOOTER     -----*/
 
-.next:last-of-type {
-  background: var(--purple) url(../_images/chamfer_pink_o_purple@3x.png) top center no-repeat;
+.next.up {
+  background: transparent url(../_images/chamfer_white_o_pink_up.png) top center no-repeat;
   -webkit-background-size: 100%;
-
-  padding: 35px 25px 10px;
+  padding-top: 37px;
 }
 
-.next:first-of-type {
-  background-color: var(--pink);
-  background: transparent url(../_images/chamfer_white_o_pink@3x.png) top center no-repeat;
+.next.down {
+  background: transparent url(../_images/chamfer_pink_o_purple.png) top center no-repeat;
   -webkit-background-size: 100%;
-}
-
-.next:first-of-type {
-  /*  display: none;*/
-  box-sizing: border-box;
-  padding: 45px 25px 0px;
-  width: 100vw;
-  min-width: 300px;
-  position: fixed;
-  bottom: 87px;
-  text-align: right;
-  font-family: "Avenir Next Condensed";
+  padding-top: 35px;
 }
 
 article:last-of-type {

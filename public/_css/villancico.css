@@ -35,7 +35,7 @@ h1 {
 /*-----     CONTENT     -----*/
 
 .chamfer {
-  background: url(../_images/chamfer_purple@2x.png);
+  background: url(../_images/chamfer_purple.png);
   -webkit-background-size: 100%;
 }
 
@@ -78,25 +78,19 @@ input.play {
   background-size: 25px;
 }
 
-
-.next.only {
-  background: transparent url(../_images/chamfer_white_o_pink@3x.png) top center no-repeat;
+.next {
+  background: transparent url(../_images/chamfer_white_o_pink.png) top center no-repeat;
   -webkit-background-size: 100%;
-  padding-bottom: 10px;
-  z-index: 5;
 }
 
 .next.up {
-  background-color: var(--pink);
-  background: transparent url(../_images/chamfer_white_o_pink@3x.png) top center no-repeat;
+  background: transparent url(../_images/chamfer_white_o_pink_up.png) top center no-repeat;
   -webkit-background-size: 100%;
-  bottom: 85px;
-  padding: 45px 25px 0px;
-  margin-bottom: ;
+  bottom: 90px;
+  padding-top: 35px;
 }
 
 .next.down {
-  background: var(--purple) url(../_images/chamfer_pink_o_purple@3x.png) top center no-repeat;
+  background: transparent url(../_images/chamfer_pink_o_purple.png) top center no-repeat;
   -webkit-background-size: 100%;
-  padding: 40px 25px 5px;
 }

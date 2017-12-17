@@ -1,7 +1,7 @@
 <?php
 
 // sets time format in spanish
-setlocale(LC_TIME, "es_ES");
+setlocale(LC_TIME, "es_ES.UTF-8");
 
 // initialize date variable
 $date = time();
@@ -11,17 +11,15 @@ $date = time();
 if (isset($_GET['d'])) {
   $test_date = $_GET['d'] ?? '';
   $test_date_array = explode("-", $test_date);
-//  $date = mktime(0, 0, 0, $test_date_array[1], $test_date_array[2], $test_date_array[0]);
-  $date = mktime($test_date_array[3], $test_date_array[4], $test_date_array[5], $test_date_array[1], $test_date_array[2], $test_date_array[0]);
-  
-  // show date and hour
-  //echo strftime('%a, %b %e - %r / %Z', $date);
+  $date = mktime(0, 0, 0, $test_date_array[1], $test_date_array[2], $test_date_array[0]);
+
 }
 
 // process date parts
 $day = date('d', $date);
 $month = date('m', $date);
 $year = date('Y', $date);
+
 
 // adjust year if it past december 24 of the same year
 if ($month == 12 && $day > 24) {

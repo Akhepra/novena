@@ -9,12 +9,10 @@ $(function () {
 
 
   // next options
-  if ($nexts.length === 1) {
-    $nexts.addClass('only');
-  } else {
+  if ($nexts.length === 2) {
     $nexts.first().addClass('up');
     $nexts.last().addClass('down');
-    $('article').css('padding-bottom', '80px');
+    $('article').css('padding-bottom', '100px');
   }
 
   // audio stuff
